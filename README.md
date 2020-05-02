@@ -1,9 +1,8 @@
-# recipe-database
-Our recipe library
+# Recipe Database
+The recipe library of Jess, Nik, and friends
 
 # Template
----------------------------------------------------------------
----------------------------------------------------------------
+```
 # About
 * Serves: x
 * Time required: XXmins
@@ -16,3 +15,4 @@ Our recipe library
 # Steps
 1. [Regular instructions, but use (`amounts`) whenever referring to ingredients]
 1. e.g. Add in carrots (`4-5`) and celery (`5 stalks`) and soften.
+```
