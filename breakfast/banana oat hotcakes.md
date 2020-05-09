@@ -4,12 +4,12 @@
 * Origin: Magazine clipping
 
 # Ingredients
-* 2 eggs
 * 1 1/2 cups self-raising flour, sifted
-* 1 1/4 cups milk
 * 1 tsp baking powder
 * 1 cup quick cooking oats
 * 1 tbsp caster sugar
+* 2 eggs
+* 1 1/4 cups milk
 * 60g butter, melted and cooled
 * 1 tsp vanilla essence
 * 2 small bananas, mashed
