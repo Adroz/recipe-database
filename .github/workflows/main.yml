@@ -1,0 +1,16 @@
+name: Notify of Submodule Changes
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  notify:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.wiki_commit_dispatch }}
+          repository: Adroz/manager-toolkit-website
+          event-type: WikiUpdateEvent
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
