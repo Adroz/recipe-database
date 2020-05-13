@@ -13,7 +13,7 @@
 * Flaky sea salt, for garnish
 
 # Method
-1. Whisk active dry yeast (`35g`), honey (`2 tsp`), and warm water (`2½ cups`) in a medium bowl and let sit 10-15 minutes (it should foam or at least get creamy; if it doesn’t your yeast is dead and you should start again—check the expiration date!).
+1. Whisk active dry yeast (`7g`), honey (`2 tsp`), and warm water (`2½ cups`) in a medium bowl and let sit 10-15 minutes (it should foam or at least get creamy; if it doesn’t your yeast is dead and you should start again—check the expiration date!).
 1. Add in all-purpose flour (`625g`) and salt (`1 Tbsp`) and mix with a rubber spatula until a shaggy dough forms and no dry streaks remain.
 1. Pour olive oil (`4 Tbsp`) into a big bowl that will fit in your refrigerator. Transfer dough to bowl and turn to coat in oil. Cover with a silicone lid or plastic wrap and chill until dough is doubled in size (it should look very bubbly and alive), at least 8 hours and up to 1 day. If you're in a rush, you can also let it rise at room temperature until doubled in size, 3–4 hours.
 1. Generously butter a 13x9" baking pan (for thicker focaccia that’s perfect for sandwiches), or an 18x13" rimmed baking sheet (for focaccia that's thinner and crispier). Pour olive oil (`1 Tbsp`) into center of pan. 
