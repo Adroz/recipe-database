@@ -16,7 +16,7 @@
 * 3 bay leaves
 * 3tbsp of tomato paste
 
-# Steps
+# Method
 1. Add onion (`1`), minced garlic (`4 cloves`) and a couple of teaspoons of oil to a large saucepan set to medium. Cook until soft.
 1. Add in carrots (`4-5`) and celery (`5 stalks`) and soften.
 1. Turn up temperature to medium-high and add mince (`500g`). Cook until browned.
