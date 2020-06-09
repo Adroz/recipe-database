@@ -12,7 +12,7 @@ The recipe library of Jess, Nik, and friends
 * [amount] [object], [preparation]
 * e.g. 4 garlic cloves, minced
 
-# Steps
+# Method
 1. [Regular instructions, but use (`amounts`) whenever referring to ingredients]
 1. e.g. Add in carrots (`4-5`) and celery (`5 stalks`) and soften.
 ```
