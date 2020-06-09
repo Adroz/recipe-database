@@ -15,7 +15,7 @@
 * 1 cup dry white wine
 * 1/3 cup fresh parsley, chopped
 
-# Steps
+# Method
 1. Cook spaghetti (`1 lb`). Boil salted water and cook until al dente. Drain and set aside. 
 1. Heat olive oil (`2 tbsp`) over medium heat. Add shrimp (`1 lb`), pinch of salt, and red pepper flakes (`1/2 tsp`). Cook about one minute. Flip and repeat. Set aside.
 1. Heat olive oil (`1 tbsp`). Add onion (`1`) and garlic (`8 cloves`) and cook 3-5 minutes, stirring frequently. 
