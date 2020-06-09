@@ -16,7 +16,7 @@
 * butter, for cooking
 * butter and golden syrup, for topping
 
-# Steps
+# Method
 1. In a small bowl, whisk together the flour (`1 cup`), baking powder (`2 tsp`), salt (`1/2 tsp`), rolled oats (`1/2 cup`), and coconut (`1/2 cup`). Make a well in the center.
 1. Add milk (`1 cup`), butter (`2 tbsp`), egg (`1`), and golden syrup (`3 tbsp`). Whisk wet and dry ingredients together until well combined (do not overmix, a few small lumps are fine).
 1. Heat a nonstick pan over medium heat. Grease with butter. Ladle the batter onto the pan and cook until the surface of the pancake starts to bubble, about 3 minutes. Flip carefully with a spatula, and cook until browned on the underside, about 1-2 minutes more.
