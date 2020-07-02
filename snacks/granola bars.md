@@ -1,4 +1,4 @@
-# Granola Bars
+# Jessie's Granola Bars
 * Serves: 8
 * Time required: 30 minutes active, 1 hour passive
 * Origin: Adapted from [Ina Garten](https://www.foodnetwork.com/recipes/ina-garten/homemade-granola-bars-recipe-1948524) and [Gaby](https://whatsgabycooking.com/homemade-granola-bars/)
