@@ -1,6 +1,6 @@
 # Challah
 * Serves: 12
-* Time required: 120 minutes
+* Time required: 3 hours (including 2.5 hours of proofing time)
 * Origin: Adapted from [NYT Cooking](https://cooking.nytimes.com/recipes/7199-my-favorite-challah) and Nik's coworker
 
 # Ingredients
