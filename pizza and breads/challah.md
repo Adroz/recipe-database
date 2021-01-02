@@ -4,7 +4,6 @@
 * Origin: Adapted from [NYT Cooking](https://cooking.nytimes.com/recipes/7199-my-favorite-challah) and Nik's coworker
 
 # Ingredients
-* [amount] [object], [preparation]
 * 1.5 tbsp yeast
 * 1 tbsp honey
 * 1 3/4 cups bathtub-temperature water
