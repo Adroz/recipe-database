@@ -26,9 +26,6 @@
 * 1/4 cup sour cream
 
 # Method
-1. [Regular instructions, but use (`amounts`) whenever referring to ingredients]
-1. e.g. Add in carrots (`4-5`) and celery (`5 stalks`) and soften.
-2. Preparation
 ## Crust
 1. Preheat oven to 160°C. Pulse biscuits (`190g`) in a food processor until broken down into fine crumbs (you should have about 2 cups). Set aside 2 Tbsp. biscuit crumbs for serving. Add sugar (`1.5 Tbsp`) and salt (`1/4 tsp`) and pulse just to combine. Add butter (`85g`) and pulse until mixture is the consistency of wet sand.
 2. Transfer to a 9"-diameter deep pie dish. Press crumbs firmly onto bottom and up sides of dish. Bake crust until fragrant and edges just start to take on color, 20–25 minutes. Transfer to a wire rack and let cool.
