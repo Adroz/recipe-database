@@ -1,7 +1,7 @@
 # Chickpeas
 * Serves: n/a
 * Time required: XXmins
-* Origin: Will Prinzi
+* Origin: [Will Prinzi](https://photos.app.goo.gl/819PvNY5JkcMV6Ck7)
 
 # Ingredients
 * 2 cups dried beans
