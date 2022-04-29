@@ -1,7 +1,7 @@
 # Hummus
 * Serves: n/a
 * Time required: 30 mins
-* Origin: [Will Prinzi](https://github.com/Adroz/recipe-database)
+* Origin: [Will Prinzi](https://photos.app.goo.gl/ojPTbntCTQhwZWJx7)
 
 # Ingredients
 * 4 cups cooked [chickpeas](https://github.com/Adroz/recipe-database/blob/master/homemade%20basics/chickpeas.md), cooled
