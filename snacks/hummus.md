@@ -16,8 +16,9 @@
 
 # Method
 1. Blend chickpeas (`4 cups`) in a food processor for 5 minutes. Add just enough aquafaba to get the mixture to blend well. You want it to be as thick as possible.
-2. Toast cumin seeds in a pan until they get 2 shades darker. Grind them with a mortar and pestle or spice grinder once cooled.
-3. Add microplaned garlic (`3 cloves`), lemon juice (`1/2 lemon`), ground toasted cumin seeds (`10 seeds`), and umami (`2 tsp`) and blend.
-4. Next add tahini (`8 oz`) and blend for 10 seconds. Tahini gets bitter if overblended.
-5. Season to taste with salt, lemon, more tahini, more cumin, or more umami. You want a nice balance of all these flavors.
-6. Top with your favorite toppings when ready to serve.
+2. Microplane garlic (`3 cloves`) into the lemon juice (`1/2 lemon`) and let sit until ready to use.
+3. Toast cumin seeds in a pan until they get 2 shades darker. Grind them with a mortar and pestle or spice grinder once cooled.
+4. Add lemon mixture, ground toasted cumin seeds (`10 seeds`), and umami (`2 tsp`) to the chickpeas and blend.
+5. Next add tahini (`8 oz`) and blend for 10 seconds. Tahini gets bitter if overblended.
+6. Season to taste with salt, lemon, more tahini, more cumin, or more umami. You want a nice balance of all these flavors.
+7. Top with your favorite toppings when ready to serve.
