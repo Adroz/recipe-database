@@ -39,7 +39,7 @@
 
 # Method
 1. [Regular instructions, but use (`amounts`) whenever referring to ingredients]
-1. Combine the minced garlic (`6 cloves`), ginger (`4 tsp`), turmeric (`2 tsp`), garam masala (`1 tsp`), ground coriander (`1 tsp`), ground cumin (`1 tsp`), paprika or chili powder (`1/2 tsp`), yogurt (`1 tsp`), and salt (`1 Tbsp`) in a big bowl. Mix well. Add cubed chicken (`800g`) and mix thoroughly so all sides of chicken are coated. Refrigerate for 2-8 hours.
+1. Combine the minced garlic (`6 cloves`), ginger (`4 tsp`), turmeric (`2 tsp`), garam masala (`1 tsp`), ground coriander (`1 tsp`), ground cumin (`1 tsp`), paprika or chili powder (`1/2 tsp`), yogurt (`150 ml`), and salt (`1 Tbsp`) in a big bowl. Mix well. Add cubed chicken (`800g`) and mix thoroughly so all sides of chicken are coated. Refrigerate for 2-8 hours.
 1. Combine cashews (`50 grams`) and milk (`50 ml`) and set aside for as long as chicken is marinading.
 1. Heat ghee (`3 tbsp`) in a big pot. Add ground cumin (`1 tsp`), bay leaves ('2'), green cardamom pods (`6`), cinnamon (`1/2 tsp`) and fry for 30 seconds. Add thinly diced onions (`2`) and green chilli (`1`) and fry until golden brown, about 8 minutes. Add minced garlic (`3 cloves`) and ginger (`1 inch grated`) and fry for 1 minute. Add crushed tomatoes (`400g can`) and turn heat to low, letting everything come together for 15 minutes.
 1. Add tomato paste (`2 tbsp`) and coriander stems (`1 bunch`). And let sit covered for another 5 minutes.
