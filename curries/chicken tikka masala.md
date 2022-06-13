@@ -49,3 +49,4 @@
 5. Add coriander (`1 tsp`), garam masala (`1 tsp`), and turmeric (`1 tsp`).
 6. Pulse cashews (`50 g`) and milk (`50 ml`) in a food processor until smooth. If needed, add some of the sauce mixture to the food processor to help homogenize the mixture. Depending on how much texture you like in your curry, process as much or as little of the sauce with the cashew mixture as you like.
 7. Add the cooked chicken back into the pot with the sauce. Add heavy cream (`50 ml`). Add green capsicum chunks (`1`) and red onion chunks (`1`) and let simmer until vegetables become slightly tender but still crunchy, about 5 minutes.
+8. Garnish with coriander leaves.
