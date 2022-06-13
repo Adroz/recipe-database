@@ -1,7 +1,7 @@
 # Palak Paneer
 * Serves: 2
 * Time required: 45mins
-* Origin: [Indian Healthy Recipes](https://www.indianhealthyrecipes.com/palak-paneer-recipe-easy-paneer-recipes-step-by-step-pics/)
+* Origin: [Archana's Kitchen](https://www.archanaskitchen.com/palak-paneer-spinach-in-cottage-cheese-gravy) and [Indian Healthy Recipes](https://www.indianhealthyrecipes.com/palak-paneer-recipe-easy-paneer-recipes-step-by-step-pics/)
 
 # Ingredients
 * 1 tbsp oil
