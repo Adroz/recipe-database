@@ -1,0 +1,36 @@
+# Project information
+site_name: Jessie's Recipes
+site_url: https://www.jessiesrecipes.com
+site_author: Nik Moores
+
+# Copyright
+copyright: Copyright &copy; 2022 Nik Moores
+
+# Repository
+repo_name: "GitHub"
+repo_url: "https://github.com/Adroz/recipe-database"
+
+#Theming
+theme:
+  name: material
+  icon:
+    logo: fontawesome/regular/lemon
+  favicon: images/lemon-regular.svg
+  features:
+    - navigation.indexes
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: amber
+      accent: deep orange
+      toggle:
+        icon: fontawesome/solid/sun
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: fontawesome/solid/moon
+        name: Switch to light mode
