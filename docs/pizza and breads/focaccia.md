@@ -1,4 +1,5 @@
 * Serves: 10-12
+# Focaccia
 * Time required: 4-12hrs, depending on proofing time
 * Origin: [Bon Appetit](https://www.bonappetit.com/recipe/easy-no-knead-focaccia)
 
