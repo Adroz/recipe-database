@@ -1,3 +1,4 @@
+# Garlicky Tomato Shrimp Pasta
 * Serves: 4-6
 * Time required: 40mins
 * Origin: [Tasty](https://tasty.co/recipe/one-pot-garlic-tomato-shrimp-pasta)

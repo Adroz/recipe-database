@@ -1,4 +1,4 @@
-Vegetarian Tortilla Soup
+# Vegetarian Tortilla Soup
 * Serves: 6
 * Time required: 45mins
 * Origin: Inspired by [Chicken Tortilla Soup](https://www.averiecooks.com/easy-30-minute-homemade-chicken-tortilla-soup/)

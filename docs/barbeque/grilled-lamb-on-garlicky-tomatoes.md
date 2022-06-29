@@ -1,4 +1,4 @@
-# Grilled lamb on garlicky tomatoes
+# Grilled Lamb on Garlicky Tomatoes
 * Serves: 6-8
 * Time required: 35mins prep, 15mins cook
 * Origin: [Nothing Fancy](https://www.goodreads.com/en/book/show/46011237-nothing-fancy)

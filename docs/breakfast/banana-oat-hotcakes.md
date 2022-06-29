@@ -1,3 +1,4 @@
+# Banana Oat Pancakes
 * Serves: 3-4
 * Time required: 20mins
 * Origin: Magazine clipping

@@ -1,4 +1,4 @@
-# Anzac biscuit pancakes
+# Anzac Biscuit Pancakes
 * Serves: 3-4
 * Time required: 30 mins
 * Origin: Adapted from [ANZAC Pancakes](https://amcarmenskitchen.com/2014/04/25/anzac-pancakes/)

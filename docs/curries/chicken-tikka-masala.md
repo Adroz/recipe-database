@@ -1,4 +1,4 @@
-# Chicken tikka masala
+# Chicken Tikka Masala
 * Serves: 6
 * Time required: 90 mins
 * Origin: [Chetna Makan](https://www.youtube.com/watch?v=PTK6Yr-St8s) and [Bon Appetit](https://www.bonappetit.com/recipe/chicken-tikka-masala)
