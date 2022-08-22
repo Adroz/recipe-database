@@ -19,6 +19,6 @@
 1. Once all chunks are browned, return all to the dutch oven, stir in the Ayam Malaysian Rendang Curry Paste, and fry until fragrant, about 2 minutes.
 1. Add the coconut cream (`400ml`) and water (`1 cup`). Stir well. Bring to a boil and reduce to a simmer. Let it simmmer on low heat for 2.5 hours or until the beef is tender. Optionally, add all the ingredients to a slow cooker and cook on low for 6-8 hours.
 1. Toast the coconut (`1/4 cup`) by sprinkling it evenly on a nonstick baking sheet and placing it under a grill for about 5 minutes, checking every 1-2 minutes to ensure it doesn't burn. Remove it when it's a nice even golden brown. Add it to the curry.
-1. Toward the end of cooking, add the brown sugar (`1-2 tbsp, to taste`) and salt (`1/2-1 tsp, to taste`). Taste the curry sauce and add more salt, sugar, or acid (lime juice) as needed.
+1. Toward the end of cooking, add the brown sugar (`1-2 tbsp, to taste`) and salt (`1/2-1 tsp, to taste`). Taste the curry sauce and balance the flavours by adding more salt, sugar, or acid (lime juice) as needed.
 1. If the curry is too thick, add water as needed to bring it to the consistency you like. If the curry is too thin, simmer with the lid off to let moisture evaporate.
 1. Serve with steamed rice.
