@@ -6,7 +6,7 @@
 ## Ingredients
 * 4 pounds Italian eggplants (about 4 medium), peeled, sliced into discs ½–¾ inch thick
 * 1 pound fresh mozzerella, shredded
-* [Onion and Butter Tomato Sauce](https://github.com/Adroz/recipe-database/blob/master/dressings%2C%20relishes%2C%20salsas%2C%20and%20sauces/onion%20and%20butter%20tomato%20sauce.md)
+* [Onion and Butter Tomato Sauce](www.jessiesrecipes.com/dressings%2C-relishes%2C-salsas%2C-and-sauces/onion-and-butter-tomato-sauce/)
 * Kosher salt
 * Olive oil
 
