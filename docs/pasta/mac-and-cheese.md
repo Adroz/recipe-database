@@ -1,4 +1,4 @@
-# [Mac and Cheese]
+# Mac and Cheese
 * Serves: 8
 * Time required: 30 mins
 * Origin: [Cooking Classy](https://www.cookingclassy.com/mac-and-cheese/)
