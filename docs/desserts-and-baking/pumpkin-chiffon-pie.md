@@ -5,19 +5,19 @@
 
 ## Ingredients
 ### Crust
-* 190g plain biscuit (milk arrowroot, digestive, etc.) (should be ~2 cups of crumbs)
-* 1.5 Tbsp. (AUS) sugar 
+* 190g plain biscuit (digestives, milk arrowroot, etc.) (should be ~2 cups of crumbs)
+* 1.5 Tbsp sugar 
 * 1/4 tsp. salt
 * 85g unsalted butter, melted and slightly cooled
 ### Filling
 * 1 envelope unflavored gelatin (2½ tsp.)
-* 1 tsp. ground cinnamon
-* 1/4 tsp. ground nutmeg
+* 1 tsp ground cinnamon
+* 1/4 tsp ground nutmeg
 * 1/2 cup sugar, scant
 * 1/4 cup sugar, scant
-* 1.5 Tbsp. (AUS) sugar
-* 1/2 tsp. salt
-* 3/4 tsp. salt
+* 1.5 Tbsp sugar
+* 1/2 tsp salt
+* 3/4 tsp salt
 * 3 large egg yolks
 * 3 large egg whites
 * 3/4 cup whole milk
