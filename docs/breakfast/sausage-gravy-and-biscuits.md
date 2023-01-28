@@ -32,8 +32,8 @@
 ### Biscuits
 1. Preheat oven to 425°F/210°C
 1. In the bowl of a food processor with a blade attachment, add flour (`2.5 cups`), baking powder (`2 Tbsps`), and salt (`1 tsp`). Lightly mix.
-1. Add butter and blend until pea-size clumps form.
-1. With motor running very slowly, add buttermilk into the well. Mix gently with a fork until just combined (don't overmix, it will make tough biscuits).
+1. Add butter (`1/2 cup`) and blend until pea-size clumps form.
+1. With motor running very slowly, add buttermilk (`1 cup`) into the well. Mix gently with a fork until just combined (don't overmix, it will make tough biscuits).
 1. Turn the dough out onto a floured surface and create a rectangle using your hands. If it's flaky, just keep pressing the dough into the right shape, it will come together eventually.
 1. Fold the dough into thirds (like folding a letter). (Fold left side over center, then right side, so it's still in a rectangular shape.) Then roll back out to 1-inch thick. Repeat the folding and rolling process twice more, rolling the dough out to ½" thick on the final time.
 1. Cut the rectangle into 9 or 12 squares. Soften the edges and place on a baking paper lined baking sheet about 1-inch apart. 
