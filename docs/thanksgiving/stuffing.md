@@ -1,7 +1,7 @@
 # Stuffing
 * Serves: 8
 * Time required: 75 mins
-* Origin: adapted from Jess's Mom, Virginia and [Binging with Babish](https://basicswithbabish.co/basicsepisodes/last-minute-thanksgiving)
+* Origin: adapted from Jess's Mom, Virginia and [Basics with Babish](https://basicswithbabish.co/basicsepisodes/last-minute-thanksgiving)
 
 ## Ingredients
 ### Sage Sausage
