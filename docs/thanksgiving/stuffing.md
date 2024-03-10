@@ -1,6 +1,6 @@
 # Stuffing
 * Serves: 8
-* Time required: 120 mins
+* Time required: 75 mins
 * Origin: Jess's Mom, Virginia and [Binging with Babish](https://basicswithbabish.co/basicsepisodes/last-minute-thanksgiving)
 
 ## Ingredients
