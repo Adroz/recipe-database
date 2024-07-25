@@ -5,13 +5,13 @@
 * Origin: Tonight's Dinner 2, by Adam Liaw
 
 ## Ingredients
-6 ripe bananas
-4 wholemeal pita, naan or stale bread slices (or just sub with rolled oats)
-3 tablespoons butter
-2 tablespoons honey, plus extra to serve
-100 ml pouring cream, plus extra to serve
-1 cup (180 g) pitted dates, chopped
-¼ cup (30 g) slivered almonds
+* 6 ripe bananas
+* 4 wholemeal pita, naan or stale bread slices (or just sub with rolled oats)
+* 3 tablespoons butter
+* 2 tablespoons honey, plus extra to serve
+* 100 ml pouring cream, plus extra to serve
+* 1 cup (180 g) pitted dates, chopped
+* ¼ cup (30 g) slivered almonds
 
 ## Method
 1. Mash 4 of the bananas to a smooth mash. Using a food processor, grind the bread into fine breadcrumbs.
