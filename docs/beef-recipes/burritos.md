@@ -1,4 +1,4 @@
-# [Recipe Name]
+# Meal Prep Burritos
 * Serves: 6
 * Time required: 60 mins
 * Origin: Jess's homemade
