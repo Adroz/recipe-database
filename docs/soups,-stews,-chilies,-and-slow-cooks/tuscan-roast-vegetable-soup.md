@@ -1,4 +1,4 @@
-# Tuscan Roasted Vegetable Soup
+# Tuscan Roast Vegetable Soup
 * Serves: 4
 * Time required: 45 mins
 * Origin: Adapted from [Lucy Sally Sommer](https://www.lucysallysommer.co.uk/roasted-butternut-squash-soup), [video](https://www.instagram.com/p/DDRP_LWIxXW/)
