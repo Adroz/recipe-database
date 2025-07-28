@@ -1,4 +1,4 @@
-# Roasted Vegetable Soup
+# Tuscan Roasted Vegetable Soup
 * Serves: 4
 * Time required: 45 mins
 * Origin: Adapted from [Lucy Sally Sommer](https://www.lucysallysommer.co.uk/roasted-butternut-squash-soup), [video](https://www.instagram.com/p/DDRP_LWIxXW/)
@@ -7,7 +7,7 @@
 ### Roasted Vegetables
 * 2 onions, peeled, halved and sliced into thirds  
 * 1 small butternut, peeled and sliced into cubes
-* * 4 garlic cloves, sliced
+* 4 garlic cloves, sliced
 * 1 tsp paprika
 * 1 tsp oregano
 * 1 tsp thyme  
@@ -25,7 +25,7 @@
 * zest of 1 lemon
 * juice of ½ lemon  
 * 200g short pasta, such as [Ditali](https://www.pasta-garofalo.com/au/product/n-52-ditali/)
-* 6 leaves curly kale, stems removed and sliced  
+* 6 leaves kale, stems removed and sliced  
 * 100ml cream  
 * ⅓ cup parmesan
   
