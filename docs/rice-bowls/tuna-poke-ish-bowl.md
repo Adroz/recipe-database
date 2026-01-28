@@ -16,7 +16,8 @@
 * 1 carrot, shredded
 * 1 cup edamame beans, cooked
 * 1 avocado, sliced
+* 1 nori sheet
 
 ## Method
 1. Mix tuna (`850g`), mayonnaise (`1/4 cup`), tonkatsu sauce (`2 tbsp`), soy sauce (`1 tbsp`), sriracha (`1-2 tsp`), and garlic powder (`1 tsp`) in a bowl.
-2. Serve over rice and top with desired amounts of cucumber, red capsicum, carrot, edamame beans, avocado, or any other vegatable.
+2. Serve over rice and top with desired amounts of cucumber, red capsicum, carrot, edamame beans, avocado, or any other vegatable. Serve with nori.
