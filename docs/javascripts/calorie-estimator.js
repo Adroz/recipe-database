@@ -451,17 +451,6 @@ function isRecipePage() {
 }
 
 /**
- * Escape HTML special characters to prevent XSS
- * @param {string} str - The string to escape
- * @returns {string} - HTML-escaped string
- */
-function escapeHtml(str) {
-  const div = document.createElement('div');
-  div.textContent = str;
-  return div.innerHTML;
-}
-
-/**
  * Create the collapsible nutrition info element
  */
 function createNutritionElement(totalCalories, caloriesPerServing, servings, ingredientResults) {
@@ -506,39 +495,41 @@ function createNutritionElement(totalCalories, caloriesPerServing, servings, ing
     border-top: 1px solid var(--md-default-fg-color--lighter, #ddd);
   `;
   
-  // Main nutrition info - these values are sanitized numbers
-  let detailsHTML = `
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.5rem; margin-bottom: 0.75rem;">
-      <div><strong>Per serving:</strong> ~${caloriesPerServing} kcal (${kjPerServing} kJ)</div>
-      <div><strong>Total recipe:</strong> ~${totalCalories} kcal (${totalKJ} kJ)</div>
-      <div><strong>Servings:</strong> ${servings}</div>
-    </div>
+  // Create grid for main nutrition info (all numeric values, safe)
+  const nutritionGrid = document.createElement('div');
+  nutritionGrid.style.cssText = 'display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.5rem; margin-bottom: 0.75rem;';
+  nutritionGrid.innerHTML = `
+    <div><strong>Per serving:</strong> ~${caloriesPerServing} kcal (${kjPerServing} kJ)</div>
+    <div><strong>Total recipe:</strong> ~${totalCalories} kcal (${totalKJ} kJ)</div>
+    <div><strong>Servings:</strong> ${servings}</div>
   `;
+  details.appendChild(nutritionGrid);
   
   // Show unmatched ingredients if any
-  // Escape ingredient names to prevent XSS (ingredient names come from page content)
+  // Use DOM methods to safely handle ingredient names (prevents XSS)
   const unmatched = ingredientResults.filter(r => !r.matched);
   if (unmatched.length > 0) {
-    const escapedIngredients = unmatched.map(u => escapeHtml(u.ingredient)).join(', ');
-    detailsHTML += `
-      <div style="margin-top: 0.5rem; padding: 0.5rem; background: var(--md-admonition-bg-color, rgba(255,193,7,0.1)); border-radius: 4px; font-size: 0.85em;">
-        <strong>⚠️ Not estimated (${unmatched.length} ingredient${unmatched.length > 1 ? 's' : ''}):</strong>
-        <span style="color: var(--md-default-fg-color--light, #666);">
-          ${escapedIngredients}
-        </span>
-      </div>
-    `;
+    const unmatchedDiv = document.createElement('div');
+    unmatchedDiv.style.cssText = 'margin-top: 0.5rem; padding: 0.5rem; background: var(--md-admonition-bg-color, rgba(255,193,7,0.1)); border-radius: 4px; font-size: 0.85em;';
+    
+    const label = document.createElement('strong');
+    label.textContent = `⚠️ Not estimated (${unmatched.length} ingredient${unmatched.length > 1 ? 's' : ''}): `;
+    unmatchedDiv.appendChild(label);
+    
+    const ingredientSpan = document.createElement('span');
+    ingredientSpan.style.color = 'var(--md-default-fg-color--light, #666)';
+    // Use textContent to safely set the ingredient list (no HTML parsing)
+    ingredientSpan.textContent = unmatched.map(u => u.ingredient).join(', ');
+    unmatchedDiv.appendChild(ingredientSpan);
+    
+    details.appendChild(unmatchedDiv);
   }
   
-  // Disclaimer
-  detailsHTML += `
-    <p style="margin: 0.75rem 0 0 0; font-size: 0.8em; color: var(--md-default-fg-color--light, #666); font-style: italic;">
-      ℹ️ These are rough estimates only (${confidence}% of ingredients matched). 
-      Actual values may vary based on specific brands, preparation methods, and portion sizes.
-    </p>
-  `;
-  
-  details.innerHTML = detailsHTML;
+  // Disclaimer (static text, safe)
+  const disclaimer = document.createElement('p');
+  disclaimer.style.cssText = 'margin: 0.75rem 0 0 0; font-size: 0.8em; color: var(--md-default-fg-color--light, #666); font-style: italic;';
+  disclaimer.textContent = `ℹ️ These are rough estimates only (${confidence}% of ingredients matched). Actual values may vary based on specific brands, preparation methods, and portion sizes.`;
+  details.appendChild(disclaimer);
   
   container.appendChild(summary);
   container.appendChild(details);
