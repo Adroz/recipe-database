@@ -58,7 +58,6 @@ async function releaseWakeLock() {
   if (wakeLock !== null) {
     await wakeLock.release();
     wakeLock = null;
-    console.log('Wake lock released');
   }
 }
 
@@ -85,7 +84,7 @@ async function toggleWakeLock() {
 
 // Re-acquire wake lock when page becomes visible again
 function handleVisibilityChange() {
-  if (wakeLockEnabled && document.visibilityState === 'visible') {
+  if (wakeLockEnabled && wakeLock === null && document.visibilityState === 'visible') {
     requestWakeLock();
   }
 }
