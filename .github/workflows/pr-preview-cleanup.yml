@@ -1,0 +1,40 @@
+name: Cleanup PR Preview
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  cleanup-preview:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Install Surge
+        run: npm install -g surge
+
+      - name: Teardown Surge deployment
+        env:
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+        run: |
+          PREVIEW_URL="recipe-database-pr-${{ github.event.pull_request.number }}.surge.sh"
+          surge teardown $PREVIEW_URL --token $SURGE_TOKEN || true
+
+      - name: Find preview comment
+        uses: peter-evans/find-comment@v3
+        id: find-comment
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: '📦 PR Preview'
+
+      - name: Update comment to indicate closure
+        if: steps.find-comment.outputs.comment-id != ''
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          comment-id: ${{ steps.find-comment.outputs.comment-id }}
+          edit-mode: replace
+          body: |
+            ## 📦 PR Preview
+
+            ~Preview has been cleaned up~ (PR was ${{ github.event.pull_request.merged && 'merged' || 'closed' }})
