@@ -452,6 +452,7 @@ function isRecipePage() {
 
 /**
  * Create the collapsible nutrition info element
+ * Styled to match the recipe bullet points (Serves, Time required, etc.)
  */
 function createNutritionElement(totalCalories, caloriesPerServing, servings, ingredientResults) {
   // Convert to kJ
@@ -463,91 +464,76 @@ function createNutritionElement(totalCalories, caloriesPerServing, servings, ing
   const total = ingredientResults.length;
   const confidence = total > 0 ? Math.round((matched / total) * 100) : 0;
   
+  // Create a list item to match the existing bullet point style
+  const listItem = document.createElement('li');
+  listItem.className = 'nutrition-estimate';
+  
+  // Create the details/summary for expandable content
   const container = document.createElement('details');
-  container.className = 'nutrition-estimate';
-  container.style.cssText = `
-    margin: 1rem 0 1.5rem 0;
-    padding: 0.75rem 1rem;
-    background: var(--md-code-bg-color, #f5f5f5);
-    border-radius: 8px;
-    border-left: 4px solid var(--md-primary-fg-color, #ffa000);
-    font-size: 0.9rem;
-  `;
+  container.style.cssText = 'display: inline;';
   
   const summary = document.createElement('summary');
   summary.style.cssText = `
     cursor: pointer;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    user-select: none;
+    display: inline;
+    list-style: none;
   `;
-  summary.innerHTML = `
-    <span style="font-size: 1.1em;">🍽️</span>
-    <span>Estimated Nutrition: ~${caloriesPerServing} kcal / ${kjPerServing} kJ per serving</span>
-  `;
+  summary.textContent = `Est. Nutrition: ~${caloriesPerServing} kcal / ${kjPerServing} kJ per serving`;
   
+  // Expanded details content
   const details = document.createElement('div');
   details.style.cssText = `
-    margin-top: 0.75rem;
-    padding-top: 0.75rem;
-    border-top: 1px solid var(--md-default-fg-color--lighter, #ddd);
+    margin-top: 0.5rem;
+    margin-left: 0;
+    padding: 0.5rem 0;
+    font-size: 0.9em;
+    color: var(--md-default-fg-color--light, #666);
   `;
   
-  // Create grid for main nutrition info (all numeric values, safe)
-  const nutritionGrid = document.createElement('div');
-  nutritionGrid.style.cssText = 'display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.5rem; margin-bottom: 0.75rem;';
-  nutritionGrid.innerHTML = `
-    <div><strong>Per serving:</strong> ~${caloriesPerServing} kcal (${kjPerServing} kJ)</div>
-    <div><strong>Total recipe:</strong> ~${totalCalories} kcal (${totalKJ} kJ)</div>
-    <div><strong>Servings:</strong> ${servings}</div>
-  `;
-  details.appendChild(nutritionGrid);
+  // Build details content using DOM methods for safety
+  const totalLine = document.createElement('div');
+  totalLine.textContent = `Total recipe: ~${totalCalories} kcal (${totalKJ} kJ)`;
+  details.appendChild(totalLine);
   
   // Show unmatched ingredients if any
-  // Use DOM methods to safely handle ingredient names (prevents XSS)
   const unmatched = ingredientResults.filter(r => !r.matched);
   if (unmatched.length > 0) {
     const unmatchedDiv = document.createElement('div');
-    unmatchedDiv.style.cssText = 'margin-top: 0.5rem; padding: 0.5rem; background: var(--md-admonition-bg-color, rgba(255,193,7,0.1)); border-radius: 4px; font-size: 0.85em;';
-    
-    const label = document.createElement('strong');
-    label.textContent = `⚠️ Not estimated (${unmatched.length} ingredient${unmatched.length > 1 ? 's' : ''}): `;
-    unmatchedDiv.appendChild(label);
-    
-    const ingredientSpan = document.createElement('span');
-    ingredientSpan.style.color = 'var(--md-default-fg-color--light, #666)';
-    // Use textContent to safely set the ingredient list (no HTML parsing)
-    ingredientSpan.textContent = unmatched.map(u => u.ingredient).join(', ');
-    unmatchedDiv.appendChild(ingredientSpan);
-    
+    unmatchedDiv.style.cssText = 'margin-top: 0.25rem;';
+    unmatchedDiv.textContent = `Not estimated: ${unmatched.map(u => u.ingredient).join(', ')}`;
     details.appendChild(unmatchedDiv);
   }
   
-  // Disclaimer (static text, safe)
-  const disclaimer = document.createElement('p');
-  disclaimer.style.cssText = 'margin: 0.75rem 0 0 0; font-size: 0.8em; color: var(--md-default-fg-color--light, #666); font-style: italic;';
-  disclaimer.textContent = `ℹ️ These are rough estimates only (${confidence}% of ingredients matched). Actual values may vary based on specific brands, preparation methods, and portion sizes.`;
+  // Disclaimer
+  const disclaimer = document.createElement('div');
+  disclaimer.style.cssText = 'margin-top: 0.25rem; font-style: italic; font-size: 0.9em;';
+  disclaimer.textContent = `(${confidence}% of ingredients matched - rough estimate only)`;
   details.appendChild(disclaimer);
   
   container.appendChild(summary);
   container.appendChild(details);
+  listItem.appendChild(container);
   
-  return container;
+  return listItem;
 }
 
 /**
- * Insert the nutrition element after the recipe meta info
+ * Insert the nutrition element as a bullet point in the meta info list
  */
 function insertNutritionElement(element) {
   const content = document.querySelector('.md-content article');
   if (!content) return false;
   
-  // Find the first h2 (usually "Ingredients")
-  const firstH2 = content.querySelector('h2');
-  if (firstH2) {
-    firstH2.parentNode.insertBefore(element, firstH2);
+  // Check if already inserted (prevent duplicates)
+  if (content.querySelector('.nutrition-estimate')) {
+    return false;
+  }
+  
+  // Find the first ul (the recipe meta info list with Serves, Time, etc.)
+  const firstUL = content.querySelector('ul');
+  if (firstUL) {
+    // Add as the last item in the meta info list
+    firstUL.appendChild(element);
     return true;
   }
   
@@ -560,6 +546,12 @@ function insertNutritionElement(element) {
 function calculateAndDisplayNutrition() {
   // Only run on recipe pages
   if (!isRecipePage()) {
+    return;
+  }
+  
+  // Check if already inserted (prevent duplicates from multiple event triggers)
+  const content = document.querySelector('.md-content article');
+  if (content && content.querySelector('.nutrition-estimate')) {
     return;
   }
   
