@@ -27,7 +27,7 @@ function createWakeLockButton() {
     justify-content: center;
     transition: background-color 0.3s, transform 0.2s;
   `;
-  button.innerHTML = '☀️';
+  button.innerHTML = '👁️';
   button.addEventListener('click', toggleWakeLock);
   document.body.appendChild(button);
   return button;
@@ -68,14 +68,14 @@ async function toggleWakeLock() {
   if (wakeLockEnabled) {
     await releaseWakeLock();
     wakeLockEnabled = false;
-    button.innerHTML = '🌙';
+    button.innerHTML = '💤';
     button.setAttribute('title', 'Screen can sleep');
     button.style.opacity = '0.6';
   } else {
     const success = await requestWakeLock();
     if (success) {
       wakeLockEnabled = true;
-      button.innerHTML = '☀️';
+      button.innerHTML = '👁️';
       button.setAttribute('title', 'Keep screen awake');
       button.style.opacity = '1';
     }
