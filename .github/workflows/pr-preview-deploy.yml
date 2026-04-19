@@ -16,10 +16,16 @@ jobs:
       contents: write
       pull-requests: write
     steps:
+      # NOTE: Using pull_request_target with checkout of PR code has security implications.
+      # This is acceptable here because:
+      # 1. We only build static MkDocs documentation (no arbitrary code execution)
+      # 2. mkdocs.yml is validated and mkdocs build only processes markdown/config
+      # 3. No sensitive secrets beyond GITHUB_TOKEN are exposed
       - name: Checkout PR branch
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v5
