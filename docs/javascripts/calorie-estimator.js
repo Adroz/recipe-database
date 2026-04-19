@@ -189,7 +189,9 @@ const UNIT_CONVERSIONS = {
   'pieces': 1,
   'clove': 1,
   'cloves': 1,
-  'inch': 10, // approximate grams for ginger
+  // Note: 'inch' is primarily used for ginger in recipes (approximately 10g per inch)
+  // This may not be accurate for other ingredients measured in inches
+  'inch': 10,
 };
 
 /**
@@ -291,15 +293,29 @@ function parseIngredient(line) {
 
 /**
  * Find the best matching food item from our database
+ * Sorts keywords by length (longest first) to prioritize specific matches
+ * e.g., 'chicken breast' matches before 'chicken'
  */
 function findFoodMatch(ingredientName) {
   const lowerName = ingredientName.toLowerCase();
   
-  // First, try exact keyword matches (more specific items first)
+  // Build a list of all keyword matches with their specificity (keyword length)
+  const matches = [];
+  
   for (const [key, data] of Object.entries(CALORIE_DATABASE)) {
-    if (data.keywords.some(keyword => lowerName.includes(keyword))) {
-      return { key, ...data };
+    for (const keyword of data.keywords) {
+      if (lowerName.includes(keyword)) {
+        matches.push({ key, data, keyword, specificity: keyword.length });
+        break; // Only need one match per database entry
+      }
     }
+  }
+  
+  // Sort by specificity (longest keyword first) and return the most specific match
+  if (matches.length > 0) {
+    matches.sort((a, b) => b.specificity - a.specificity);
+    const best = matches[0];
+    return { key: best.key, ...best.data };
   }
   
   return null;
@@ -362,7 +378,8 @@ function getServings() {
   
   const text = content.textContent;
   
-  // Look for "Serves: X" pattern
+  // Look for "Serves: X" or "Serves: X-Y" pattern
+  // Ranges like "3-4" will be averaged by parseQuantity()
   const servesMatch = text.match(/serves?:\s*([\d\-]+)/i);
   if (servesMatch) {
     return parseQuantity(servesMatch[1]);
@@ -407,10 +424,10 @@ function getIngredients() {
  * Check if current page is a recipe page (not index)
  */
 function isRecipePage() {
-  // Check if we're on index page
+  // Check if we're on an index page
   const path = window.location.pathname;
-  if (path === '/' || path.endsWith('/index.html') || path.endsWith('/')) {
-    // Check if it's a category index (not the home index)
+  if (path.endsWith('/') || path.endsWith('/index.html')) {
+    // Check if it's the home page (not a recipe)
     const content = document.querySelector('.md-content');
     if (content) {
       const h1 = content.querySelector('h1');
@@ -431,6 +448,17 @@ function isRecipePage() {
       h.textContent.toLowerCase().includes('ingredient'));
   
   return hasServes && hasIngredients;
+}
+
+/**
+ * Escape HTML special characters to prevent XSS
+ * @param {string} str - The string to escape
+ * @returns {string} - HTML-escaped string
+ */
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
 }
 
 /**
@@ -478,7 +506,7 @@ function createNutritionElement(totalCalories, caloriesPerServing, servings, ing
     border-top: 1px solid var(--md-default-fg-color--lighter, #ddd);
   `;
   
-  // Main nutrition info
+  // Main nutrition info - these values are sanitized numbers
   let detailsHTML = `
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.5rem; margin-bottom: 0.75rem;">
       <div><strong>Per serving:</strong> ~${caloriesPerServing} kcal (${kjPerServing} kJ)</div>
@@ -488,13 +516,15 @@ function createNutritionElement(totalCalories, caloriesPerServing, servings, ing
   `;
   
   // Show unmatched ingredients if any
+  // Escape ingredient names to prevent XSS (ingredient names come from page content)
   const unmatched = ingredientResults.filter(r => !r.matched);
   if (unmatched.length > 0) {
+    const escapedIngredients = unmatched.map(u => escapeHtml(u.ingredient)).join(', ');
     detailsHTML += `
       <div style="margin-top: 0.5rem; padding: 0.5rem; background: var(--md-admonition-bg-color, rgba(255,193,7,0.1)); border-radius: 4px; font-size: 0.85em;">
         <strong>⚠️ Not estimated (${unmatched.length} ingredient${unmatched.length > 1 ? 's' : ''}):</strong>
         <span style="color: var(--md-default-fg-color--light, #666);">
-          ${unmatched.map(u => u.ingredient).join(', ')}
+          ${escapedIngredients}
         </span>
       </div>
     `;
