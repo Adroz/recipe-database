@@ -45,6 +45,10 @@ jobs:
           comment-author: 'github-actions[bot]'
           body-includes: '📦 PR Preview'
 
+      - name: Get current timestamp
+        id: timestamp
+        run: echo "time=$(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_OUTPUT
+
       - name: Create or update comment
         uses: peter-evans/create-or-update-comment@v4
         with:
@@ -58,4 +62,9 @@ jobs:
 
             🔗 **Preview URL:** https://adroz.github.io/recipe-database/pr-preview/pr-${{ github.event.pull_request.number }}/
 
-            <sub>This preview was built from commit ${{ github.event.pull_request.head.sha }}</sub>
+            | | |
+            |---|---|
+            | **Commit** | `${{ github.event.pull_request.head.sha }}` |
+            | **Updated** | ${{ steps.timestamp.outputs.time }} |
+
+            > 💡 _If you don't see your latest changes, try a hard refresh (Ctrl+Shift+R or Cmd+Shift+R)._
