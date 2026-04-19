@@ -100,7 +100,7 @@ const CALORIE_DATABASE = {
   'celery': { calories: 14, unit: '100g', kj: 59 },
   'capsicum': { calories: 31, unit: '100g', kj: 130 },
   'bell pepper': { calories: 31, unit: '100g', kj: 130 },
-  'pepper': { calories: 31, unit: '100g', kj: 130 },
+  'bell peppers': { calories: 31, unit: '100g', kj: 130 },
   'spinach': { calories: 23, unit: '100g', kj: 96 },
   'kale': { calories: 35, unit: '100g', kj: 146 },
   'lettuce': { calories: 15, unit: '100g', kj: 63 },
@@ -288,6 +288,14 @@ const UNIT_CONVERSIONS = {
   'big': 150,
 };
 
+// Count-based units that represent approximate weights per item
+// These units multiply the quantity by their gram equivalent (e.g., "6 fillets" = 6 * 150g)
+const COUNT_BASED_UNITS = [
+  'piece', 'pieces', 'slice', 'slices', 'fillet', 'fillets',
+  'thigh', 'thighs', 'breast', 'breasts', 'stalk', 'stalks',
+  'can', 'small', 'medium', 'large', 'big', 'handful', 'inch'
+];
+
 // Parse quantity from ingredient text
 function parseQuantity(text) {
   // Handle fractions
@@ -393,11 +401,7 @@ function calculateIngredientCalories(ingredientText) {
     
     // Special handling for count-based units (fillets, thighs, etc.)
     // These represent approximate weights per item, so multiply by quantity
-    const countBasedUnits = ['piece', 'pieces', 'slice', 'slices', 'fillet', 'fillets', 
-                             'thigh', 'thighs', 'breast', 'breasts', 'stalk', 'stalks',
-                             'can', 'small', 'medium', 'large', 'big', 'handful', 'inch'];
-    
-    if (countBasedUnits.includes(unit)) {
+    if (COUNT_BASED_UNITS.includes(unit)) {
       // For "6 chicken thigh fillets", quantity=6, conversionFactor=150g per fillet
       amountInGramsOrMl = quantity * conversionFactor;
     } else {
@@ -416,8 +420,9 @@ function calculateIngredientCalories(ingredientText) {
         amountInGramsOrMl = value;
       }
     } else {
-      // Default: assume the quantity represents ~100g worth of ingredient
-      // For items like "2 brown onions", assume ~150g each
+      // Default weight estimate per item when no unit is specified (e.g., "2 onions", "3 carrots")
+      // 150g is a reasonable average for medium-sized whole vegetables/fruits
+      // This provides a sensible estimate without being overly conservative or generous
       amountInGramsOrMl = quantity * 150;
     }
   }
