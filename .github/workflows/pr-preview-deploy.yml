@@ -13,9 +13,10 @@ jobs:
   deploy-preview:
     runs-on: ubuntu-latest
     permissions:
+      contents: write
       pull-requests: write
     steps:
-      - name: Checkout
+      - name: Checkout PR branch
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -29,17 +30,12 @@ jobs:
       - name: Build site
         run: mkdocs build
 
-      - name: Install Surge
-        run: npm install -g surge
-
-      - name: Deploy to Surge
-        id: deploy
-        env:
-          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
-        run: |
-          PREVIEW_URL="recipe-database-pr-${{ github.event.pull_request.number }}.surge.sh"
-          surge ./site $PREVIEW_URL --token $SURGE_TOKEN
-          echo "preview_url=https://$PREVIEW_URL" >> $GITHUB_OUTPUT
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          destination_dir: pr-preview/pr-${{ github.event.pull_request.number }}
 
       - name: Find existing comment
         uses: peter-evans/find-comment@v3
@@ -60,6 +56,6 @@ jobs:
 
             Your preview site is ready!
 
-            🔗 **Preview URL:** ${{ steps.deploy.outputs.preview_url }}
+            🔗 **Preview URL:** https://adroz.github.io/recipe-database/pr-preview/pr-${{ github.event.pull_request.number }}/
 
             <sub>This preview was built from commit ${{ github.event.pull_request.head.sha }}</sub>

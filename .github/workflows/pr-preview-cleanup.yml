@@ -8,17 +8,28 @@ jobs:
   cleanup-preview:
     runs-on: ubuntu-latest
     permissions:
+      contents: write
       pull-requests: write
     steps:
-      - name: Install Surge
-        run: npm install -g surge
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 0
 
-      - name: Teardown Surge deployment
-        env:
-          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+      - name: Remove PR preview directory
         run: |
-          PREVIEW_URL="recipe-database-pr-${{ github.event.pull_request.number }}.surge.sh"
-          surge teardown $PREVIEW_URL --token $SURGE_TOKEN || true
+          PR_DIR="pr-preview/pr-${{ github.event.pull_request.number }}"
+          if [ -d "$PR_DIR" ]; then
+            rm -rf "$PR_DIR"
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "Clean up preview for PR #${{ github.event.pull_request.number }}" || echo "Nothing to commit"
+            git push
+          else
+            echo "Preview directory $PR_DIR not found, skipping cleanup"
+          fi
 
       - name: Find preview comment
         uses: peter-evans/find-comment@v3
