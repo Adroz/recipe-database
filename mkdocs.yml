@@ -34,3 +34,6 @@ theme:
       toggle:
         icon: fontawesome/solid/moon
         name: Switch to light mode
+
+extra_javascript:
+  - javascripts/wake-lock.js
