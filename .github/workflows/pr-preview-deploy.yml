@@ -47,7 +47,7 @@ jobs:
 
       - name: Get local time
         id: time
-        run: echo "datetime=$(TZ='Australia/Sydney' date +'%a %d %b %Y, %I:%M %p %Z')" >> $GITHUB_OUTPUT
+        run: echo "datetime=$(TZ='Australia/Brisbane' date +'%a %d %b %Y, %I:%M %p %Z')" >> $GITHUB_OUTPUT
 
       - name: Create or update comment
         uses: peter-evans/create-or-update-comment@v4
