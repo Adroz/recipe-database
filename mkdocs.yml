@@ -37,3 +37,4 @@ theme:
 
 extra_javascript:
   - javascripts/wake-lock.js
+  - javascripts/calorie-estimator.js
