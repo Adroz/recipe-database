@@ -537,7 +537,12 @@ function createNutritionElement(totalCalories, caloriesPerServing, servings, ing
   `;
   
   // Build details content using DOM methods for safety
+  const perServingLine = document.createElement('div');
+  perServingLine.textContent = `Per serving: ~${caloriesPerServing} kcal (${kjPerServing} kJ)`;
+  details.appendChild(perServingLine);
+  
   const totalLine = document.createElement('div');
+  totalLine.style.cssText = 'margin-top: 0.25rem;';
   totalLine.textContent = `Total recipe: ~${totalCalories} kcal (${totalKJ} kJ)`;
   details.appendChild(totalLine);
   
