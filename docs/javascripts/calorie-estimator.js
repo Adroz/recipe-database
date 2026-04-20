@@ -325,7 +325,8 @@ function findFoodMatch(ingredientName) {
  * Calculate calories for an ingredient
  */
 function calculateIngredientCalories(parsed) {
-  if (!parsed) return { calories: 0, matched: false, ingredient: 'unknown' };
+  // Filtered ingredients (e.g., "to serve", "to taste") - don't include in unmatched list
+  if (!parsed) return { calories: 0, matched: false, filtered: true, ingredient: '' };
   
   const { quantity, unit, ingredientName } = parsed;
   const foodMatch = findFoodMatch(ingredientName);
@@ -459,9 +460,9 @@ function createNutritionElement(totalCalories, caloriesPerServing, servings, ing
   const totalKJ = Math.round(totalCalories * 4.184);
   const kjPerServing = Math.round(caloriesPerServing * 4.184);
   
-  // Count matched vs unmatched ingredients
+  // Count matched vs unmatched ingredients (excluding filtered like "to serve")
   const matched = ingredientResults.filter(r => r.matched).length;
-  const total = ingredientResults.length;
+  const total = ingredientResults.filter(r => !r.filtered).length;
   const confidence = total > 0 ? Math.round((matched / total) * 100) : 0;
   
   // Create a list item to match the existing bullet point style
@@ -490,8 +491,8 @@ function createNutritionElement(totalCalories, caloriesPerServing, servings, ing
   totalLine.textContent = `Total recipe: ~${totalCalories} kcal (${totalKJ} kJ)`;
   details.appendChild(totalLine);
   
-  // Show unmatched ingredients if any
-  const unmatched = ingredientResults.filter(r => !r.matched);
+  // Show unmatched ingredients if any (excluding filtered ingredients like "to serve")
+  const unmatched = ingredientResults.filter(r => !r.matched && !r.filtered);
   if (unmatched.length > 0) {
     const unmatchedDiv = document.createElement('div');
     unmatchedDiv.style.cssText = 'margin-top: 0.25rem;';
