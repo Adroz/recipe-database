@@ -17,7 +17,7 @@ const CALORIE_DATABASE = {
   'chicken': { calories: 190, per: '100g', keywords: ['chicken'] },
   
   // Beef
-  'beef': { calories: 250, per: '100g', keywords: ['beef', 'steak', 'ground beef', 'mince'] },
+  'beef': { calories: 250, per: '100g', keywords: ['beef', 'steak', 'ground beef', 'mince', 'sirloin', 'ribeye', 'chuck', 'flank', 'brisket'] },
   'beef mince': { calories: 250, per: '100g', keywords: ['beef mince', 'ground beef'] },
   
   // Pork
@@ -44,7 +44,7 @@ const CALORIE_DATABASE = {
   'butter': { calories: 717, per: '100g', keywords: ['butter'] },
   'cheese': { calories: 402, per: '100g', keywords: ['cheese'] },
   'cheddar': { calories: 403, per: '100g', keywords: ['cheddar'] },
-  'mozzarella': { calories: 280, per: '100g', keywords: ['mozzarella'] },
+  'mozzarella': { calories: 280, per: '100g', keywords: ['mozzarella', 'mozzerella'] },
   'parmesan': { calories: 431, per: '100g', keywords: ['parmesan', 'parmigiano'] },
   'cream cheese': { calories: 342, per: '100g', keywords: ['cream cheese'] },
   'paneer': { calories: 265, per: '100g', keywords: ['paneer'] },
@@ -145,10 +145,59 @@ const CALORIE_DATABASE = {
   'hummus': { calories: 166, per: '100g', keywords: ['hummus'] },
   
   // ===== BROTHS & STOCKS =====
-  'broth': { calories: 7, per: '100ml', keywords: ['broth', 'stock', 'vegetable broth', 'chicken broth', 'beef broth', 'stock powder'] },
+  'broth': { calories: 7, per: '100ml', keywords: ['broth', 'stock', 'vegetable broth', 'chicken broth', 'beef broth', 'stock powder', 'dashi', 'hondashi', 'kombu'] },
   
   // ===== SPICES (negligible calories) =====
-  'spices': { calories: 5, per: '5g', keywords: ['turmeric', 'cumin', 'paprika', 'garam masala', 'cinnamon', 'cardamom', 'thyme', 'oregano', 'basil', 'rosemary', 'pepper', 'chili', 'curry powder'] },
+  'spices': { calories: 5, per: '5g', keywords: ['turmeric', 'cumin', 'paprika', 'garam masala', 'cinnamon', 'cardamom', 'thyme', 'oregano', 'rosemary', 'pepper', 'chili', 'curry powder', 'coriander', 'sage', 'fennel', 'nutmeg', 'allspice', 'clove', 'bay leaf', 'bay leaves', 'bay', 'chilli', 'chile', 'star anise', 'anise', 'harissa', 'sumac', 'mustard seeds', 'fenugreek', 'kasuri methi', 'nigella', 'dried herbs', 'dried sage', 'dried fennel', 'ground coriander', 'ground clove', 'ground nutmeg'] },
+  
+  // ===== CONDIMENTS & SAUCES (additional) =====
+  'worcestershire sauce': { calories: 78, per: '100ml', keywords: ['worcestershire'] },
+  'hot sauce': { calories: 35, per: '100ml', keywords: ['hot sauce', 'sriracha', 'franks', 'tabasco', 'chilli sauce', 'chile sauce'] },
+  'oyster sauce': { calories: 100, per: '100ml', keywords: ['oyster sauce'] },
+  'tonkatsu sauce': { calories: 130, per: '100ml', keywords: ['tonkatsu', 'tonkastu', 'tonkatsu sauce'] },
+  'tomato paste': { calories: 82, per: '100g', keywords: ['tomato paste', 'tomato puree'] },
+  'pickles': { calories: 11, per: '100g', keywords: ['pickle', 'pickles', 'gherkin', 'gherkins', 'dill pickles'] },
+  
+  // ===== PROTEINS (additional) =====
+  'anchovy': { calories: 210, per: '100g', keywords: ['anchovy', 'anchovies', 'anchovie'] },
+  'pepperoni': { calories: 494, per: '100g', keywords: ['pepperoni', 'salami', 'prosciutto', 'chorizo'] },
+  
+  // ===== VEGETABLES (additional) =====
+  'avocado': { calories: 160, per: '100g', keywords: ['avocado', 'avocados'] },
+  'peas': { calories: 81, per: '100g', keywords: ['peas', 'frozen peas', 'green peas'] },
+  'cucumber': { calories: 15, per: '100g', keywords: ['cucumber', 'cucumbers'] },
+  'shallot': { calories: 72, per: '100g', keywords: ['shallot', 'shallots'] },
+  'scallions': { calories: 32, per: '100g', keywords: ['scallion', 'scallions', 'spring onion', 'spring onions', 'green onion', 'green onions'] },
+  
+  // ===== FRESH HERBS =====
+  'fresh herbs': { calories: 36, per: '100g', keywords: ['parsley', 'cilantro', 'coriander leaves', 'coriander leaf', 'coriander/cilantro', 'fresh mint', 'mint leaves', 'mint', 'chives', 'dill', 'basil'] },
+  
+  // ===== GRAINS (additional) =====
+  'cornmeal': { calories: 361, per: '100g', keywords: ['cornmeal', 'polenta', 'cornstarch', 'corn starch'] },
+  'biscuit': { calories: 480, per: '100g', keywords: ['biscuit', 'biscuits', 'digestive', 'graham cracker', 'graham crackers'] },
+  'pita': { calories: 275, per: '100g', keywords: ['pita', 'pita bread', 'flatbread', 'wholemeal pita'] },
+  
+  // ===== NUTS & SEEDS (additional) =====
+  'tahini': { calories: 595, per: '100g', keywords: ['tahini'] },
+  'shredded coconut': { calories: 592, per: '100g', keywords: ['desiccated coconut', 'shredded coconut', 'coconut flakes'] },
+  'capers': { calories: 23, per: '100g', keywords: ['capers', 'caper'] },
+  'dried fruit': { calories: 301, per: '100g', keywords: ['dried fruit', 'raisins', 'sultanas', 'currants', 'cranberries'] },
+  'nori': { calories: 35, per: '100g', keywords: ['nori', 'seaweed'] },
+  
+  // ===== SWEETENERS (additional) =====
+  'golden syrup': { calories: 327, per: '100g', keywords: ['golden syrup', 'treacle'] },
+  
+  // ===== ALCOHOLIC BEVERAGES =====
+  'wine': { calories: 83, per: '100ml', keywords: ['white wine', 'red wine', 'cooking wine', 'chinese cooking wine', 'dry wine', 'dry white wine'] },
+  'spirits': { calories: 220, per: '100ml', keywords: ['whisky', 'whiskey', 'bourbon', 'rum', 'vodka', 'gin', 'brandy'] },
+  
+  // ===== BAKING (additional) =====
+  'gelatin': { calories: 335, per: '100g', keywords: ['gelatin', 'gelatine', 'unflavored gelatin'] },
+  'tamarind': { calories: 239, per: '100g', keywords: ['tamarind'] },
+  
+  // ===== ZERO OR NEAR-ZERO CALORIE ITEMS =====
+  'salt': { calories: 0, per: '5g', keywords: ['salt', 'kosher salt', 'sea salt', 'flaky salt', 'flaky sea salt'] },
+  'water': { calories: 0, per: '100ml', keywords: ['water'] },
 };
 
 // Unit conversions to a standard measurement
@@ -281,10 +330,11 @@ function parseIngredient(line) {
     }
   }
   
-  // Clean ingredient name - remove parenthetical notes and commas
+  // Clean ingredient name - remove parenthetical notes, normalize spaces
+  // Note: we intentionally don't strip after commas, as doing so can lose the
+  // main ingredient when descriptions precede it (e.g. "skinless, boneless chicken breasts, cubed")
   ingredientName = ingredientName
     .replace(/\([^)]*\)/g, '')  // Remove parenthetical
-    .replace(/,.*$/, '')        // Remove everything after comma
     .replace(/\s+/g, ' ')       // Normalize spaces
     .trim();
   
