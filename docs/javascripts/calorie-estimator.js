@@ -468,16 +468,11 @@ function createNutritionElement(totalCalories, caloriesPerServing, servings, ing
   const listItem = document.createElement('li');
   listItem.className = 'nutrition-estimate';
   
-  // Create the details/summary for expandable content
+  // Create the details/summary for expandable content (native arrow/chevron marker)
   const container = document.createElement('details');
-  container.style.cssText = 'display: inline;';
   
   const summary = document.createElement('summary');
-  summary.style.cssText = `
-    cursor: pointer;
-    display: inline;
-    list-style: none;
-  `;
+  summary.style.cssText = 'cursor: pointer;';
   summary.textContent = `Est. Nutrition: ~${caloriesPerServing} kcal / ${kjPerServing} kJ per serving`;
   
   // Expanded details content
