@@ -1,9 +1,7 @@
-# Single-Serving Sticky Date Pudding
+# Microwave Sticky Date Pudding
 * Serves: 1
 * Prep time: 5 mins
 * Cooking time: 2 mins
-
-This quick microwave recipe makes a single portion of rich sticky date pudding.
 
 ## Ingredients
 
