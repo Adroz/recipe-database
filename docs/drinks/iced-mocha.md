@@ -3,7 +3,7 @@
 * Time required: 15 mins (+ 5 mins sauce prep)
 * Origin: [The Absolute BEST Mocha Recipe You'll Ever Make](https://www.youtube.com/watch?v=906khxWTiIw)
 
-## Mocha Sauce (batch recipe — stores 2 weeks in fridge)
+## Mocha Sauce (batch — stores 2 weeks in fridge)
 
 ### Ingredients
 * 200g dark brown sugar
@@ -15,9 +15,9 @@
 ### Method
 1. Add dark brown sugar (`200g`) and cocoa powder (`100g`) to a small saucepan on medium-low heat. Give it an initial stir to start combining.
 1. Add water (`150g`). Stir continuously — the cocoa powder will seem stubborn at first but smooths out as temperature increases, after about 2–3 minutes.
-1. Heat just until steam rises off the surface, just before simmering. Do not let it simmer or boil, and keep stirring to prevent burning.
+1. Heat just until steam rises off the surface, just before simmering. Do not let it simmer or boil, and keep stirring to prevent burning on the bottom.
 1. Remove from heat. Stir in vanilla paste (`7–10g`) and kosher salt (`4g`).
-1. Transfer to a sealed container. Stores in the fridge for up to 2 weeks.
+1. Transfer to a sealed container and refrigerate. Stores for up to 2 weeks.
 
 ---
 
@@ -32,5 +32,5 @@
 
 ### Method
 1. Add mocha sauce (`3/4 oz`), espresso (`2 shots`), and milk (`4.5–5 oz`) to a vessel.
-1. Froth with a handheld frother for ~15 seconds, raising the head upwards to incorporate air. The mixture should increase in volume by about a third.
+1. Froth with a handheld frother for ~15 seconds, bringing the head upward to incorporate air. The mixture should increase in volume by about a third.
 1. Pour over ice. Dust with cocoa powder if desired.
