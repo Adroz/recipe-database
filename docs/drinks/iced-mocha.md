@@ -20,4 +20,4 @@
 1. Transfer to a sealed container and refrigerate. Stores for up to 2 weeks.
 
 
-To make a drink, combine `22g` mocha sauce with `2` shots of espresso and `135ml` milk. Froth together with a handheld frother for ~15 seconds, bringing the head upward to incorporate air. Pour over ice. Dust with cocoa powder if desired.
+To make a drink, combine `22g` mocha sauce with `2` shots of espresso and `135ml` milk. Froth together with a handheld frother for ~15 seconds, bringing the head upward to incorporate air. Pour over ice or have hot.
