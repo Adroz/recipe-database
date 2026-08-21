@@ -1,5 +1,5 @@
 # Mocha Premix
-* Serves: 1
+* Serves: 8-10 drinks per batch
 * Time required: 15 mins (+ 5 mins sauce prep)
 * Origin: [The Absolute BEST Mocha Recipe You'll Ever Make](https://www.youtube.com/watch?v=906khxWTiIw)
 
