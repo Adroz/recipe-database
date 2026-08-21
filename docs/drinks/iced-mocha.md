@@ -1,18 +1,16 @@
-# Iced Mocha
+# Mocha Premix
 * Serves: 1
 * Time required: 15 mins (+ 5 mins sauce prep)
 * Origin: [The Absolute BEST Mocha Recipe You'll Ever Make](https://www.youtube.com/watch?v=906khxWTiIw)
 
-## Mocha Sauce (batch — stores 2 weeks in fridge)
-
-### Ingredients
+## Ingredients
 * 200g dark brown sugar
 * 100g cocoa powder
 * 150ml water
 * 7–10g vanilla paste (or vanilla extract, 1:1 substitute)
 * 4g kosher salt
 
-### Method
+## Method
 1. Add dark brown sugar (`200g`) and cocoa powder (`100g`) to a small saucepan on medium-low heat. Give it an initial stir to start combining.
 1. Add water (`150ml`). Stir continuously — the cocoa powder will seem stubborn at first but smooths out as the temperature increases, about 2–3 minutes.
 1. Heat just until steam rises off the surface, just before simmering. Do not let it simmer or boil, and keep stirring to prevent burning on the bottom.
