@@ -14,7 +14,7 @@
 
 ### Method
 1. Add dark brown sugar (`200g`) and cocoa powder (`100g`) to a small saucepan on medium-low heat. Give it an initial stir to start combining.
-1. Add water (`150g`). Stir continuously — the cocoa powder will seem stubborn at first but smooths out as temperature increases, after about 2–3 minutes.
+1. Add water (`150g`). Stir continuously — the cocoa powder will seem stubborn at first but smooths out as the temperature increases, about 2–3 minutes.
 1. Heat just until steam rises off the surface, just before simmering. Do not let it simmer or boil, and keep stirring to prevent burning on the bottom.
 1. Remove from heat. Stir in vanilla paste (`7–10g`) and kosher salt (`4g`).
 1. Transfer to a sealed container and refrigerate. Stores for up to 2 weeks.
