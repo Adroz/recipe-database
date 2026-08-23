@@ -40,6 +40,9 @@ plugins:
   - macros:
       module_name: main
 
+extra_css:
+  - stylesheets/extra.css
+
 extra_javascript:
   - javascripts/wake-lock.js
   - javascripts/calorie-estimator.js
