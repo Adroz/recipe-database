@@ -35,6 +35,11 @@ theme:
         icon: fontawesome/solid/moon
         name: Switch to light mode
 
+plugins:
+  - search
+  - macros:
+      module_name: main
+
 extra_javascript:
   - javascripts/wake-lock.js
   - javascripts/calorie-estimator.js
