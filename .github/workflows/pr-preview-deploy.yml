@@ -4,7 +4,6 @@ on:
   pull_request_target:
     types: [opened, synchronize, reopened]
 
-# Cancel in-progress runs for the same PR
 concurrency:
   group: pr-preview-${{ github.event.pull_request.number }}
   cancel-in-progress: true
@@ -16,11 +15,6 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      # NOTE: Using pull_request_target with checkout of PR code has security implications.
-      # This is acceptable here because:
-      # 1. We only build static MkDocs documentation (no arbitrary code execution)
-      # 2. mkdocs.yml is validated and mkdocs build only processes markdown/config
-      # 3. No sensitive secrets beyond GITHUB_TOKEN are exposed
       - name: Checkout PR branch
         uses: actions/checkout@v4
         with:
@@ -33,7 +27,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install mkdocs-material
+        run: pip install -r requirements.txt
 
       - name: Build site
         run: mkdocs build

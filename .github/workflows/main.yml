@@ -12,8 +12,5 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      # Add all plugins in use
-      - run: pip install mkdocs-material
-      
-      # deploy the website to the gh-pages branch
+      - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force
