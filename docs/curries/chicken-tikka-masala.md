@@ -50,3 +50,18 @@
 6. Pulse cashews (`50 g`) and milk (`50 ml`) in a food processor until smooth. If needed, add some of the sauce mixture to the food processor to help homogenize the mixture. Depending on how much texture you like in your curry, process as much or as little of the sauce with the cashew mixture as you like.
 7. Add the cooked chicken back into the pot with the sauce. Add heavy cream (`50 ml`). Add green capsicum chunks (`1`) and red onion chunks (`1`) and let simmer until vegetables become slightly tender but still crunchy, about 5 minutes.
 8. Garnish with coriander leaves.
+
+## At a glance
+
+{{ recipe_matrix(
+  steps=[
+    {"label": "Marinade", "inputs": ["6 garlic cloves", "4 tsp ginger", "2 tsp turmeric", "1 tsp garam masala", "1 tsp coriander", "1 tsp cumin", "½ tsp paprika", "150ml yogurt", "1 tbsp salt"]},
+    {"label": "Coat & rest", "inputs": ["800g chicken"]},
+    {"label": "Bake", "inputs": ["marinated chicken"]},
+    {"label": "Bloom spices", "inputs": ["3 tbsp ghee", "1 tsp cumin", "2 bay leaves", "6 cardamom pods", "½ tsp cinnamon"]},
+    {"label": "Fry onions", "inputs": ["2 diced onions", "1 green chilli"]},
+    {"label": "Add aromatics", "inputs": ["3 garlic cloves", "1 inch ginger"]},
+    {"label": "Build sauce", "inputs": ["400g crushed tomatoes", "4 tbsp tomato paste", "coriander stems", "1 tsp coriander", "1 tsp garam masala", "1 tsp turmeric"]},
+    {"label": "Finish", "inputs": ["cashew-milk paste", "baked chicken", "50ml cream", "capsicum chunks", "red onion chunks"]}
+  ]
+) }}
