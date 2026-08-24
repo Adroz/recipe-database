@@ -26,3 +26,15 @@
 1. Heat olive oil (`30ml`) in a medium saucepan over high heat for 1 minute. Remove from heat and add cumin seeds (`1 tbsp`), turmeric (`1 tbsp`), coriander seeds (`1 tbsp`), nigella seeds (`2 tbsp`), cloves (`4`), and chili powder (`1 tsp`). Fry for 20 seconds and then add mustard vinegar mix, chillies (`6`), and onion (`1`).
 1. Bring to a simmer over medium heat then add the tomato (`800g`), apple or mango (`1 kg`), brown sugar (`125g`), and salt (`30g`).
 1. Reduce heat to low and simmer gently for 1-1.25 hours, stirring occasionally. Pour inter sterlizied jars with metal lids.
+
+## At a glance
+
+{{ recipe_matrix(
+  steps=[
+    {"label": "Pickle", "inputs": ["250ml apple cider vinegar", "1.5 tbsp mustard seeds"]},
+    {"label": "Blend", "inputs": ["pickled vinegar-mustard", "120g ginger", "10 garlic cloves"]},
+    {"label": "Bloom spices", "inputs": ["30ml olive oil", "1 tbsp cumin seeds", "1 tbsp turmeric", "1 tbsp coriander seeds", "2 tbsp nigella seeds", "4 cloves", "1 tsp chili powder"]},
+    {"label": "Build base", "inputs": ["vinegar-spice blend", "6 red chillies", "1 brown onion"]},
+    {"label": "Simmer", "inputs": ["800g tomatoes", "1kg mango or apple", "125g brown sugar", "30g salt"]}
+  ]
+) }}
