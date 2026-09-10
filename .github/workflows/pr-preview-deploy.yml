@@ -20,6 +20,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           persist-credentials: false
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -51,6 +52,34 @@ jobs:
         id: time
         run: echo "datetime=$(TZ='Australia/Brisbane' date +'%a %d %b %Y, %I:%M %p %Z')" >> $GITHUB_OUTPUT
 
+      - name: Get changed recipe links
+        id: recipe-links
+        run: |
+          BASE_URL="https://adroz.github.io/recipe-database/pr-preview/pr-${{ github.event.pull_request.number }}"
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+
+          CHANGED=$(git diff --name-only "$BASE_SHA" HEAD -- '*.md' | grep '^docs/' | grep -v 'docs/index\.md' | head -5)
+
+          if [ -z "$CHANGED" ]; then
+            echo 'links=' >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          OUTPUT="**Changed recipes:**"
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            URL_PATH="${file#docs/}"
+            URL_PATH="${URL_PATH%.md}/"
+            NAME=$(python3 -c "import sys; print(' '.join(w.capitalize() for w in sys.argv[1].replace('-', ' ').split()))" "$(basename "$file" .md)")
+            OUTPUT="${OUTPUT}"$'\n'"- [${NAME}](${BASE_URL}/${URL_PATH})"
+          done <<< "$CHANGED"
+
+          {
+            echo 'links<<EOF'
+            echo "$OUTPUT"
+            echo 'EOF'
+          } >> $GITHUB_OUTPUT
+
       - name: Create or update comment
         uses: peter-evans/create-or-update-comment@v4
         with:
@@ -63,5 +92,7 @@ jobs:
             Your preview site is ready!
 
             🔗 **Preview URL:** https://adroz.github.io/recipe-database/pr-preview/pr-${{ github.event.pull_request.number }}/
+
+            ${{ steps.recipe-links.outputs.links }}
 
             <sub>This preview was built from commit ${{ github.event.pull_request.head.sha }} at ${{ steps.time.outputs.datetime }}</sub>
