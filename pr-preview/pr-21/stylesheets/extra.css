@@ -1,0 +1,67 @@
+/* ============================================================
+   Recipe Matrix
+   A cooking-for-engineers-style step/ingredient flow table.
+   ============================================================ */
+
+.recipe-matrix {
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+
+.recipe-matrix-table {
+  border-collapse: collapse;
+  font-size: 0.85em;
+  table-layout: auto;
+}
+
+/* Top-left empty corner cell */
+.recipe-matrix-corner {
+  border: none;
+  background: transparent;
+}
+
+/* Step column headers — rotated vertical text */
+.recipe-matrix-step-header {
+  padding: 0 4px 8px 4px;
+  vertical-align: bottom;
+  text-align: center;
+  min-width: 2.4em;
+  border: none;
+  background: transparent;
+}
+
+.recipe-matrix-step-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--md-primary-fg-color);
+  padding: 4px 0;
+}
+
+/* Ingredient name cells */
+.recipe-matrix-ingredient {
+  padding: 4px 12px 4px 0;
+  white-space: nowrap;
+  text-align: right;
+  font-size: 0.9em;
+  vertical-align: middle;
+  border: none;
+  color: var(--md-typeset-color);
+}
+
+/* Data cells */
+.recipe-matrix-cell {
+  width: 2.4em;
+  height: 1.8em;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Highlighted cell — ingredient is used in this step */
+.recipe-matrix-cell--active {
+  background-color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+}
